@@ -5,6 +5,19 @@
     margin: 0px;
 }
 
+i {
+    font-style: normal;
+}
+
+img {
+    width: 75%;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 500;
@@ -12,5 +25,59 @@ body {
     width: 100%;
 }
 
+main {
+    position: relative;
+}
 
-@media only screen and (min-width: 800px) {}
+.empty {
+    background-image: url('./images/bg-main-mobile.png');
+    flex-direction: column-reverse;
+    padding: 1em;
+    background-repeat: no-repeat;
+}
+
+.cardFront {
+    color: white;
+    position: relative;
+}
+
+.circles {
+    width: 15%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 12px;
+    padding-top: 12px;
+}
+
+.cardDetails {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-left: 12px;
+    padding-bottom: 12px;
+}
+.frontCardFooter{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+.whiteCircle {
+    background-color: white;
+    border-radius: 50%;
+    padding: 1em 1.1em;
+}
+
+.borderCircle {
+    border: 2px solid white;
+    padding: 1px 3px;
+    border-radius: 50%;
+    margin-left: 1em;
+}
+
+@media only screen and (min-width: 800px) {
+    .flex {
+        flex-direction: row;
+    }
+}

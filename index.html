@@ -24,19 +24,17 @@
 </head>
 
 <body>
-  <main>
-    <section class="empty">
+  <main class="flex">
+    <section class="empty flex">
       <div class="cardFront">
-        <span class="circles">
-          <i class="whiteCircle"></i>
-          <i class="borderCircle"></i>
-        </span>
-        <span class="cardNumber" id="CardNumber">
-          0000 0000 0000 0000 0000
-        </span>
-        <span class="frontCardFooter">
-          <i class="cardName">Ademola Sikiru</i>
-          <i class="expiryDate">00/00</i>
+        <img src="./images/bg-card-front.png" alt="">
+        <img src="./images/card-logo.svg" alt="" class="circles">
+        <span class="cardDetails" id="CardNumber">
+          <p> 0000 0000 0000 0000 0000</p>
+          <span class="frontCardFooter">
+            <i class="cardName">Ademola Sikiru</i>
+            <i class="expiryDate">00/00</i>
+          </span>
         </span>
       </div>
       <div class="caardBack">
@@ -49,7 +47,32 @@
         </p>
       </div>
     </section>
-<section class="notEmpty"></section>
+    <section class="notEmpty">
+      <form>
+        <fieldset>
+          <label for="cName">CARDHOLDER NAME</label>
+          <input type="text" id="cName" placeholder="e.g. Jane Appleseed" name="cName" />
+        </fieldset>
+        <fieldset>
+          <label for="cNumber">CARD NUMBER</label>
+          <input type="number" id="cNumber" placeholder="e.g. 1234 5678 9123 0000" name="cNumber" />
+        </fieldset>
+        <div>
+          <fieldset>
+            <label for="Emonth">EXP.DATE (MM/YY)</label>
+            <span>
+              <input type="month" id="Emonth" name="Emonth" />
+              <input type="year" id="Eyear" name="Eyear" />
+            </span>
+          </fieldset>
+          <fieldset>
+            <label for="CVC">CVC</label>
+            <input type="number" id="CVC" name="CVC" placeholder="e.g 123" />
+          </fieldset>
+        </div>
+        <button type="submit" id="submit">Confirm</button>
+      </form>
+    </section>
   </main>
 </body>
 
