@@ -29,55 +29,105 @@ main {
     position: relative;
 }
 
+.cardDetails p {
+    font-size: 4vw;
+}
+
 .empty {
     background-image: url('./images/bg-main-mobile.png');
     flex-direction: column-reverse;
     padding: 1em;
+    background-size: cover;
     background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 33%, 33%, 34%;
+    grid-template-rows: 20%, 20%, 20%, 20%, 20%;
 }
 
 .cardFront {
     color: white;
     position: relative;
+    margin-bottom: -50px;
+    background-image: url('./images/bg-card-front.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 12px;
+    border-radius: 0 0 8px 8px;
+    width: 80%;
+    grid-column: 2/4;
+    grid-row: 4/6;
+}
+
+.cardFront img {
+    align-self: flex-start;
 }
 
 .circles {
     width: 15%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-left: 12px;
-    padding-top: 12px;
 }
 
 .cardDetails {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding-left: 12px;
-    padding-bottom: 12px;
-}
-.frontCardFooter{
-    display: flex;
+    margin-top: 3em;
     width: 100%;
+}
+
+.frontCardFooter {
+    display: flex;
     justify-content: space-between;
-    margin-top: 1em;
-}
-.whiteCircle {
-    background-color: white;
-    border-radius: 50%;
-    padding: 1em 1.1em;
+    margin-top: 2em;
 }
 
-.borderCircle {
-    border: 2px solid white;
-    padding: 1px 3px;
-    border-radius: 50%;
-    margin-left: 1em;
+.cardBack {
+    background-image: url('./images/bg-card-back.png');
+    width: 80%;
+    align-self: flex-end;
+    height: 26vh;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-column: 2/6;
+    grid-row: 1/5;
 }
 
-@media only screen and (min-width: 800px) {
+.cardBack span {
+    color: white;
+    padding-right: 3em;
+}
+
+.notEmpty {
+    display: flex;
+    justify-content: center;
+    padding-top: 5em;
+}
+
+fieldset {
+    border: none;
+}
+
+fieldset label {
+    display: block;
+}
+
+@media only screen and (min-width: 550px) {
     .flex {
         flex-direction: row;
+    }
+
+    .empty {
+        width: 35%;
+        flex-direction: column;
+    }
+
+    .cardFront {
+        width: 100%;
+    }
+
+    .cardDetails p {
+        font-size: 3vw;
     }
 }
